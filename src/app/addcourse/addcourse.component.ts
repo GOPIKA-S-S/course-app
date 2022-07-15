@@ -17,7 +17,7 @@ export class AddcourseComponent implements OnInit {
   data:any=[];
     
   constructor(private view:ViewService) {
-    view.viewGalery().subscribe(
+    view.viewGalery(this.course).subscribe(
       (r)=>(this.data=r)
     )
    }
@@ -25,7 +25,7 @@ export class AddcourseComponent implements OnInit {
   ngOnInit(): void {
   }
   Addcourse(){
-
+console.log(this.course);
     alert("Success")
   }
 

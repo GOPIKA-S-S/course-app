@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ViewCourseComponent } from './view-course/view-course.component';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class ViewService {
 
   constructor(private http:HttpClient) { }
-  viewGalery=()=>{
-    return this.http.get("https://mylinkurcodesapp.herokuapp.com/getcourses")
+  viewGalery=(course:any)=>{
+    return this.http.post<any>("https://mylinkurcodesapp.herokuapp.com/addcourses",course)
   }
 }
