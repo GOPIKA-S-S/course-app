@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { subscribeOn } from 'rxjs';
 import { ViewService } from '../view.service';
 
 @Component({
@@ -25,8 +26,11 @@ export class AddcourseComponent implements OnInit {
   ngOnInit(): void {
   }
   Addcourse(){
-console.log(this.course);
-    alert("Success")
+    this.view.viewGalery(this.Addcourse).subscribe((data)=>{
+
+    })
+    console.log(this.course)
+    alert("success")   
   }
 
 
