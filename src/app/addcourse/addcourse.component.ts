@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewService } from '../view.service';
 
 @Component({
   selector: 'app-addcourse',
@@ -6,10 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addcourse.component.css']
 })
 export class AddcourseComponent implements OnInit {
-
-  constructor() { }
+  course={
+    courseTitle:" ",
+    courseDescription:"",
+    courseDate:"",
+    courseVenue:"",
+    courseDuration:""
+  }
+  data:any=[];
+    
+  constructor(private view:ViewService) {
+    view.viewGalery().subscribe(
+      (r)=>(this.data=r)
+    )
+   }
 
   ngOnInit(): void {
   }
+  Addcourse(){
+
+    alert("Success")
+  }
+
 
 }
