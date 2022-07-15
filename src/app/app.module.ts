@@ -7,12 +7,14 @@ import { AddcourseComponent } from './addcourse/addcourse.component';
 import { ViewCourseComponent } from './view-course/view-course.component';
 import{ HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { PathComponent } from './path/path.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddcourseComponent,
     ViewCourseComponent,
+    PathComponent,
   
   ],
   imports: [

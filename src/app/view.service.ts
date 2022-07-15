@@ -9,6 +9,6 @@ export class ViewService {
 
   constructor(private http:HttpClient) { }
   viewGalery=(course:any)=>{
-    return this.http.post<any>("https://mylinkurcodesapp.herokuapp.com/addcourses",course)
+    return this.http.post<any>("https://mylinkurcodesapp.herokuapp.com/getcourses",course)
   }
 }
